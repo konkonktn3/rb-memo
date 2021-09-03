@@ -3,9 +3,9 @@ require "csv" #sample.csvを読み込む
 
 puts "1(新規でメモを作成) 2(既存のメモ編集する)"
 
-memo_type = gets.to_s
+memo_type = gets.to_s.chomp
 
-    if memo_type = "1"
+    if memo_type == "1"
         p "拡張機を除いたファイルを入力してください" 
         file_name = gets.chomp
 
@@ -17,7 +17,7 @@ memo_type = gets.to_s
             csv.puts ["#{input}"]
         csv.close
 
-    elsif memo_type = "2"
+    elsif memo_type == "2"
         p "編集したいファイル名を入力してください" 
         file_name = gets.chomp
 
